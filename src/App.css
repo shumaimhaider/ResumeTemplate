@@ -1,0 +1,74 @@
+.app {
+  min-height: 100vh;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 20px;
+  background: #313c4e;
+  color: #fff;
+  font-size: 14px;
+}
+
+.toolbar__text {
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.toolbar__button {
+  background: #3b8186;
+  color: #fff;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease;
+}
+
+.toolbar__button:hover {
+  background: #326e72;
+}
+
+.page-shell {
+  display: flex;
+  justify-content: center;
+  padding: 28px 16px 60px;
+}
+
+.page-shell .resume-page {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+@media print {
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .page-shell {
+    padding: 0;
+    display: block;
+  }
+
+  .page-shell .resume-page {
+    box-shadow: none;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}

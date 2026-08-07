@@ -1,0 +1,386 @@
+.resume-page {
+  --navy: #313c4e;
+  --teal: #3b8186;
+  --tag-bg: #adb8cb;
+  --text: #1a1a1a;
+  --muted: #4a4a4a;
+  --divider: #cfd4da;
+
+  position: relative;
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: 11mm 11mm 18mm;
+  background: #ffffff;
+  color: var(--text);
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.55;
+  box-sizing: border-box;
+
+  /* Force background colors (icon badges, tags, markers) to print even when
+     the browser's print dialog has "Background graphics" turned off. */
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+
+  /* Re-apply padding (including padding-top) at the start of every
+     continuation page so page 2+ gets the same top margin as page 1. */
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.resume-page * {
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------------- header */
+
+.resume-header {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  padding-left: 8px;
+  break-inside: avoid-page;
+}
+
+.header-intro {
+  flex: 1.55 1 0;
+  min-width: 0;
+}
+
+.header-tab {
+  position: absolute;
+  left: -11mm;
+  top: -2px;
+  width: 9px;
+  height: 46px;
+  background: var(--navy);
+  border-radius: 0 4px 4px 0;
+}
+
+.header-name {
+  margin: 0 0 2px;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.2px;
+}
+
+.header-title {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4c4c4c;
+}
+
+.header-summary {
+  margin: 0;
+  font-size: 10.5px;
+  line-height: 1.7;
+  text-align: justify;
+  color: var(--text);
+}
+
+.header-summary strong {
+  font-weight: 700;
+}
+
+.header-photo {
+  flex: 0 0 auto;
+  align-self: center;
+}
+
+.header-photo img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid var(--navy);
+  display: block;
+}
+
+.header-contact {
+  flex: 1 1 0;
+  min-width: 0;
+  list-style: none;
+  margin: 0;
+  padding: 2px 0 0 22px;
+  border-left: 1px solid var(--divider);
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.contact-row a,
+.contact-row__static {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  color: var(--teal);
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.contact-icon--badge {
+  width: 16px;
+  height: 16px;
+  background: var(--teal);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 10px;
+}
+
+.contact-text {
+  font-size: 11px;
+  word-break: break-word;
+}
+
+.header-divider {
+  border: none;
+  border-top: 1.5px solid var(--navy);
+  margin: 16px 0 14px;
+  opacity: 0.85;
+}
+
+/* ------------------------------------------------------------ two column */
+
+.resume-body {
+  display: block;
+}
+
+/* classic clearfix: clears floated columns without creating a new block
+   formatting context (which would block page fragmentation when printing) */
+.resume-body::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.resume-col {
+  min-width: 0;
+}
+
+.resume-col--left {
+  float: left;
+  width: 46.5%;
+}
+
+.resume-col--right {
+  float: right;
+  width: 46.5%;
+}
+
+.resume-col .section + .section {
+  margin-top: 16px;
+}
+
+.section__heading {
+  margin: 0 0 10px;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: var(--navy);
+  break-after: avoid-page;
+}
+
+/* ------------------------------------------------------------ entries */
+
+.entry {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 14px;
+  break-inside: avoid-page;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry--project {
+  padding-left: 0;
+}
+
+.entry__marker {
+  position: absolute;
+  left: -11mm;
+  top: 2px;
+  width: 9px;
+  height: 22px;
+  background: var(--teal);
+  border-radius: 0 4px 4px 0;
+}
+
+.entry__title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.entry__role {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 1px;
+}
+
+.entry__company {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 1px;
+}
+
+.entry__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 1px;
+}
+
+.entry__meta-sep {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.entry__sub-heading {
+  margin: 8px 0 4px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--teal);
+}
+
+.entry__bullets {
+  margin: 4px 0 0;
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.entry__bullets li {
+  position: relative;
+  font-size: 11px;
+  line-height: 1.55;
+  text-align: justify;
+  color: var(--text);
+}
+
+.entry__bullets li::marker {
+  color: var(--teal);
+}
+
+.entry__bullets strong {
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------------- tags */
+
+.skill-tags,
+.interest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: var(--tag-bg);
+  color: #16202b;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.interest-tag {
+  background: #fff;
+  color: var(--text);
+  font-size: 11px;
+  border: 1.4px solid var(--navy);
+  padding: 6px 14px;
+  border-radius: 10px;
+}
+
+/* ----------------------------------------------------------- languages */
+
+.languages-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 12px;
+}
+
+.language-item__name {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.language-item__level {
+  font-size: 10.5px;
+  font-style: italic;
+  color: var(--teal);
+  margin-top: 2px;
+}
+
+/* ---------------------------------------------------------- page break */
+
+.force-page-break {
+  display: none;
+}
+
+.section__heading--continued {
+  display: none;
+}
+
+/* --------------------------------------------------------------- print */
+
+@media print {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    color-adjust: exact;
+  }
+
+  .resume-page,
+  .resume-page * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  .resume-page {
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .force-page-break {
+    display: block;
+    break-before: page;
+    page-break-before: always;
+    height: 0;
+  }
+
+  .section__heading--continued {
+    display: block;
+  }
+}
