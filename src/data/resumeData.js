@@ -72,6 +72,7 @@ export const resumeData = {
         'Implemented a **debounced** search feature in a React data table using React Query and custom hooks reducing redundant API calls improving search responsiveness.',
         'Designed and **delivered** an end-to-end **csv export** feature, leveraging Golang background jobs to process large datasets, Pusher channels to provide real-time file **download status**, React UI for progress tracking enabling seamless and efficient large-scale data exports.',
         'Integrated Intento for **AI powered** translation, enabling automated multilingual processing of high-volume files with optimized performance and reliability.',
+        'Optimized **front-end** app **slowness** issues by profiling render bottlenecks, reducing unnecessary re-renders, and improving data-fetching patterns to deliver a faster, more responsive user experience.',
       ],
     },
   ],
