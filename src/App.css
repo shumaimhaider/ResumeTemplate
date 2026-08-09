@@ -45,13 +45,13 @@
 }
 
 .page-shell .resume-page {
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 @media print {
   html,
   body {
-    background: #fff !important;
+    background: #fcfcfd !important;
   }
 
   .no-print {
@@ -61,6 +61,7 @@
   .page-shell {
     padding: 0;
     display: block;
+    background: #fcfcfd !important;
   }
 
   .page-shell .resume-page {

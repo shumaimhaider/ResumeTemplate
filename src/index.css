@@ -1,7 +1,5 @@
-@import '@fontsource/poppins/400.css';
-@import '@fontsource/poppins/500.css';
-@import '@fontsource/poppins/600.css';
-@import '@fontsource/poppins/700.css';
+@import '@fontsource/carlito/400.css';
+@import '@fontsource/carlito/700.css';
 
 * {
   box-sizing: border-box;
@@ -11,8 +9,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #eceff3;
-  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  background: #dde2e9;
+  font-family: 'Carlito', 'Calibri', 'Segoe UI', Arial, sans-serif;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
   color-adjust: exact;

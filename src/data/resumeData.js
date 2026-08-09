@@ -21,7 +21,7 @@ export const resumeData = {
   photo: profilePhoto, // set to null to hide the photo
 
   summary:
-    '**AI-Enabled Full-Stack Software Engineer** specializing in building scalable systems ' +
+    '**AI-Enabled Full-Stack Software Engineer** with **5 years of experience** specializing in building scalable systems ' +
     'that power real-world business operations and revenue workflows. ' +
     'Experienced in translating **business requirements** into reliable ' +
     '**technical** solutions, designing distributed architectures, and ' +
@@ -64,14 +64,14 @@ export const resumeData = {
       role: 'Software Engineer',
       company: 'CodingCops',
       location: 'Lahore',
-      date: '01 / 2023 - 06 / 2025',
+      date: '01 / 2022 - 06 / 2025',
       pageBreakBefore: true,
       bulletsHeading: 'Tasks / Achievements',
       bullets: [
         'Implemented **Twilio Expressions** based routing logic for the calling feature, integrating **multi-level routing** (call type, department, user availability) with **backend APIs** to dynamically manage inbound and outbound call flows.',
         'Implemented a **debounced** search feature in a React data table using React Query and custom hooks reducing redundant API calls improving search responsiveness.',
         'Designed and **delivered** an end-to-end **csv export** feature, leveraging Golang background jobs to process large datasets, Pusher channels to provide real-time file **download status**, React UI for progress tracking enabling seamless and efficient large-scale data exports.',
-        'Designed and implemented large-scale batch translation workflows by integrating Intento AI models, enabling automated multilingual processing of high-volume files with optimized performance and reliability.',
+        'Integrated Intento for **AI powered** translation, enabling automated multilingual processing of high-volume files with optimized performance and reliability.',
       ],
     },
   ],
