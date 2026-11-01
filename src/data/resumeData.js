@@ -114,7 +114,6 @@ export const resumeData = {
     'Kubernetes',
     'Terraform',
     'Agentic Workflows',
-    'RAG, Tool Calling & MCP',
     'Agent Development',
     'Prompt Engineering',
     'Context Engineering',
