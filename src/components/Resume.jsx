@@ -75,6 +75,41 @@ function EducationEntry({ item }) {
   )
 }
 
+function CertificationEntry({ item }) {
+  return (
+    <article className="entry entry--project">
+      <div className="entry__head">
+        <h3 className="entry__title">{item.name}</h3>
+        <div className="entry__company">{item.issuer}</div>
+        {item.date && (
+          <div className="entry__meta">
+            <span>{item.date}</span>
+          </div>
+        )}
+        {item.href && (
+          <a className="cert-verify" href={item.href} target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true">
+              <path
+                d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z"
+                fill="currentColor"
+              />
+              <path
+                d="M8.5 12l2.5 2.5 4.5-5"
+                fill="none"
+                stroke="#fff"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            Verify Credential
+          </a>
+        )}
+      </div>
+    </article>
+  )
+}
+
 function ProjectEntry({ item }) {
   return (
     <article className="entry entry--project">
@@ -103,6 +138,7 @@ export default function Resume({ data }) {
     contact = [],
     experience = [],
     education = [],
+    certifications = [],
     skills = [],
     projects = [],
     languages = [],
@@ -183,6 +219,15 @@ export default function Resume({ data }) {
                   </span>
                 ))}
               </div>
+            </section>
+          )}
+
+          {certifications.length > 0 && (
+            <section className="section">
+              <h2 className="section__heading">Certifications</h2>
+              {certifications.map((item, i) => (
+                <CertificationEntry key={i} item={item} />
+              ))}
             </section>
           )}
 

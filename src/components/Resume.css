@@ -354,6 +354,22 @@
   margin-top: 2px;
 }
 
+/* ------------------------------------------------------ cert verify link */
+
+.cert-verify {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  padding: 4px 11px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--teal);
+  text-decoration: none;
+  border: 1.5px solid var(--teal);
+  border-radius: 999px;
+}
+
 /* ---------------------------------------------------------- page break */
 
 .force-page-break {

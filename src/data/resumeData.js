@@ -21,15 +21,11 @@ export const resumeData = {
   photo: profilePhoto, // set to null to hide the photo
 
   summary:
-    '**AI-Enabled Full-Stack Software Engineer** with **5 years of experience** specializing in building scalable systems ' +
-    'that power real-world business operations and revenue workflows. ' +
-    'Experienced in translating **business requirements** into reliable ' +
-    '**technical** solutions, designing distributed architectures, and ' +
-    'optimizing system performance. Develops systems and features with a ' +
-    'strong product mindset balancing **system design**, user experience, ' +
-    'and measurable business impact while leveraging **AI-assisted** ' +
-    'development tools to accelerate engineering velocity and improve code ' +
-    'quality.',
+    '**Claude Certified Developer** and **Forward Deployed Engineer** with **5 years of experience** ' +
+    'who works directly with clients to understand their **requirements** and delivers ' +
+    '**production-ready** solutions end to end. Skilled in **full-stack** development, ' +
+    'distributed systems, and **AI agents**, turning business needs into scalable, reliable software ' +
+    'with measurable impact.',
 
   // ---- Contact ------------------------------------------------------------
   // Supported icon types: email, phone, location, website, linkedin, github, medium
@@ -40,6 +36,7 @@ export const resumeData = {
     { icon: 'website', text: 'shumaimhaider.com', href: 'https://shumaimhaider.com' },
     { icon: 'linkedin', text: 'shumaimhaider', href: 'https://linkedin.com/in/shumaimhaider' },
     { icon: 'medium', text: 'shumaimhaider', href: 'https://medium.com/@shumaimhaider' },
+    { icon: 'github', text: 'shumaimhaider', href: 'https://github.com/shumaimhaider' },
   ],
 
   // ---- Work Experience (left column) --------------------------------------
@@ -51,13 +48,12 @@ export const resumeData = {
       date: '07 / 2025 - Present',
       bulletsHeading: 'Tasks / Achievements',
       bullets: [
+        'Implemented a **personalized AI agent** for platform customers that provides instant, account-specific information on their current **subscriptions**, **payments**, and billing details.',
         'Re-architected a synchronous billing workflow into a fault-tolerant, **event-driven** system to handle high-concurrency invoice processing achieving **99.9%** reliability through asynchronous workers, retry mechanisms and reconciliation logic.',
         'Integrated multiple payment gateways **(Stripe, NetBilling, Braintree)** into backend billing workflows, implementing idempotent processing, webhook verification and failure handling to improve transaction reliability and system security.',
         'Analyzed and optimized long-running SQL queries by refactoring query logic and improving indexing strategy, reducing execution time by **70%** and database CPU utilization by **35%** under high-concurrency workloads.',
-        'Implemented real-time notifications using **WebSockets**, Redis adapters, and **Pusher channels**, enhancing system scalability, supporting high concurrent users, improving overall user experience.',
         '**Migrated** customer analytics data from MongoDB to PostgreSQL to support customer trend reporting.',
         'Optimized cloud infrastructure through containerization, autoscaling, and caching strategies, reducing operational costs by **25–30%** while maintaining high performance for production-grade workloads.',
-        'Developed and delivered the core **feature** stepper form on the front-end, enabling seamless multi-step user interactions and enhancing overall user experience.',
       ],
     },
     {
@@ -87,6 +83,16 @@ export const resumeData = {
     },
   ],
 
+  // ---- Certifications (left column, after education) ----------------------
+  certifications: [
+    {
+      name: 'Claude Certified Developer - Foundations',
+      issuer: 'Anthropic',
+      date: 'Issued Oct 2026 | Expires Oct 2027',
+      href: 'https://www.credly.com/badges/f3f269c8-79c9-4cd9-afc7-22c081ccd353/linked_in_profile',
+    },
+  ],
+
   // ---- Skills (right column) ----------------------------------------------
   skills: [
     'Golang',
@@ -107,9 +113,14 @@ export const resumeData = {
     'Docker',
     'Kubernetes',
     'Terraform',
-    'AI Agents',
     'Agentic Workflows',
-    'RAG, Tool Calling & MCP'
+    'RAG, Tool Calling & MCP',
+    'Agent Development',
+    'Prompt Engineering',
+    'Context Engineering',
+    'Model Optimization',
+    'Application Security',
+    'MCP Server Development',
   ],
 
   // ---- Projects (right column) ---------------------------------------------
@@ -126,6 +137,7 @@ export const resumeData = {
     {
       name: 'FixaFib',
       role: 'Full Stack Developer',
+      pageBreakBefore: true,
       bulletsHeading: 'Tasks / Achievements',
       bullets: [
         'Led the optimization of core features to enhance system stability and prepare the product for **MVP launch**.',
@@ -135,7 +147,6 @@ export const resumeData = {
     {
       name: 'Lango',
       role: 'Full Stack Developer',
-      pageBreakBefore: true,
       bulletsHeading: 'Tasks / Achievements',
       bullets: [
         'Owned and delivered multiple core features using React, GraphQL, Golang, and Node.js following **Clean Architecture principles** for maintainability.',
@@ -157,9 +168,6 @@ export const resumeData = {
     { name: 'English', level: 'Full Professional Proficiency' },
     { name: 'Urdu', level: 'Full Professional Proficiency' },
   ],
-
-  // ---- Interests (right column) ---------------------------------------------
-  interests: ['System architecture case studies', 'AI-assisted development tools'],
 }
 
 export default resumeData
